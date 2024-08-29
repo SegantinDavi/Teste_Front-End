@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css" media="all">
+    <link rel="stylesheet" href="/styles/media-query.css">
+    <title>Teste Front-End</title>
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="/img/logo-imovel-guide.png" alt="logo da imovel guide">
+        </a>
+    </header>
+    <main>
+        <!--bloco corretores-->
+        <section class="container">
+            <div class="container-corretor">
+                <div class="container-imgCorretor corretora">
+                    <img src="/img/foto-corretora.png" alt="foto do corretor">
+                </div>
+                <div class="container-dadosCorretor">
+                    <p class="corretor-nome">Maria Eduarda</p>
+                    <p class="corretor-pontos">3.000 pontos</p>
+                    <a class="corretor-telefone">ver telefone</a>
+                </div>
+            </div>
+            <div class="container-corretor">
+                <div class="container-imgCorretor corretor">
+                    <img src="/img/foto-corretor.png" alt="foto do corretor">
+                </div>
+                <div class="container-dadosCorretor">
+                    <p class="corretor-nome">Mateus</p>
+                    <p class="corretor-pontos">3.000 pontos</p>
+                    <a class="corretor-telefone">ver telefone</a>
+                </div>
+            </div>
+        </section>
+
+        <!--bloco mande uma mensagem-->
+        <section class="container">
+            <form class="container-form">
+                <p class="form-titulo">Mande uma mensagem:</p>
+                <input type="text" class="form-input" placeholder="Digite seu CPF">
+                <input type="text" class="form-input" placeholder="Digite seu telefone">
+                <input type="text" class="form-input assunto" placeholder="Digite o assunto">
+                <input type="submit" class="form-enviar" value="Enviar Mensagem">
+            </form>
+        </section>
+
+        <!--bloco regra de 3-->
+        <section class="container calculo">
+            <p class="calculo-titulo">Regra de 3</p>
+            <div class="container-calculo">
+                <input class="calculo-input" type="text">
+                <img src="/icons/line_icon.png" alt="linha">
+                <input class="calculo-input" type="text">
+                <input class="calculo-input" type="text">
+                <img src="/icons/line_icon.png" alt="linha">
+                <input class="calculo-input" type="text">
+            </div>
+            <button class="calculo-btnCalcular">Calcular</button>
+        </section>
+
+        <!--bloco modal da imagem-->
+        <section class="container imgCasa"></section>
+
+        <!--bloco download da imagem-->
+        <section class="container imgCasa">
+            <p class="imgCasa-texto">Imovel Guide</p>
+        </section>
+
+        <!--bloco animacao de zoom out da imagem-->
+        <section class="container imgCasa"></section>
+    </main>
+    <footer>
+        <p class="footer-texto">Desenvolvido por Davi Gabriel Segantin</p>
+        <img src="/img/logo-imovel-guide.png" alt="logo da imovel guide">
+    </footer>
+</body>
+</html>

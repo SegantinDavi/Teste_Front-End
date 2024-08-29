@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*tela mobile*/
+
+:root {
+    --color-1: #FE6613;
+    --color-2: #1B2653;
+    --color-3: #787878;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+header {
+    padding: 2%;
+    background-color: var(--color-2);
+}
+
+main {
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4em;
+}
+
+.container {
+    padding: 2%;
+    width: 35vh;
+    height: 35vh;
+    border: 1.5px, solid, var(--color-3);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-corretor {
+    padding: 1%;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.container-imgCorretor {
+    width: 100%;
+    height: 100%;
+    border: 1.5px solid var(--color-3);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.corretora {
+    background-image: url(/img/foto-corretora.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.corretor {
+    background-image: url(/img/foto-corretor.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.container-dadosCorretor {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.corretor-nome {
+    font-weight: 700;
+}
+
+.corretor-pontos {
+    font-size: 0.85em;
+}
+
+.corretor-telefone {
+    text-decoration: underline;
+    font-size: 0.8em;
+    color: var(--color-1);
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.form-input {
+    padding: 2%;
+    border-radius: 5px;
+    border: 1.5px, solid, var(--color-3);
+}
+
+.form-enviar {
+    padding: 2%;
+    width: 50%;
+    text-align: center;
+    font-size: 0.9em;
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+    background-color: var(--color-1);
+}
+
+.calculo {
+    padding: 5%;
+    justify-content: space-between;
+}
+
+.container-calculo {
+    padding: 4% 0.5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.container-calculo img {
+    width: 100%;
+    justify-self: center;
+}
+
+.calculo-input {
+    width: 100%;
+    height: 2em;
+    border-radius: 5px;
+    border: 1.5px, solid, var(--color-3);
+    align-self: center;
+}
+
+.calculo-btnCalcular {
+    padding: 2%;
+    width: 40%;
+    font-size: 0.9em;
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+    background-color: var(--color-1);
+}
+
+.imgCasa {
+    background-image: url(/img/fachada-casa.jpg);
+    background-position: center;
+    background-size: cover;
+    justify-content: flex-end;
+    padding: 8%;
+}
+
+.imgCasa-texto {
+    padding: 4%;
+    color: white;
+    background-color: hsla(21, 99%, 54%, 0.893);
+    text-align: center;
+    border-radius: 5px;
+    width: 90%;
+    align-self: center;
+}
+
+footer {
+    padding: 2%;
+    background-color: var(--color-2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-texto {
+    color: white;
+    font-size: 0.9em;
+}

@@ -1,0 +1,38 @@
+/*tela desktop/laptop*/
+@media screen and (min-width: 992px) {
+    main {
+        padding: 4% 0.5%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .container {
+        padding: 5%;
+        width: 45vh;
+        height: 45vh;
+        justify-self: center;
+    }
+}
+
+/*tela tablet*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    main {
+        padding: 10% 2%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .container {
+        justify-self: center;
+    } 
+
+    .imgCasa{
+        padding: 5%;
+    }
+
+    .imgCasa-texto {
+        padding: 2%;
+    }
+}
