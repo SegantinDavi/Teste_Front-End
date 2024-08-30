@@ -270,6 +270,15 @@ input#resultView {
     align-self: center;
 }
 
+.animacao {
+    height: 100%; 
+    position: relative;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%) scale(1.2); 
+    animation: zoomOut 2s ease-out forwards; 
+}
+
 footer {
     padding: 2%;
     background-color: var(--color-2);
