@@ -4,6 +4,11 @@ const phoneExample = 11999999999;//exemplo para uso no método que formata o num
 const phoneInput = document.querySelector('#phoneInput');
 const cpfInput = document.querySelector('#cpfInput');
 const btnSubmit = document.querySelector('#btnSubmit');
+const btnCalcular = document.querySelector('#btnCalcular');
+const inputNum1 = document.querySelector('#inputNum1');
+const inputNum2 = document.querySelector('#inputNum2');
+const inputNum3 = document.querySelector('#inputNum3');
+const resultView = document.querySelector('#resultView');
 
 phoneView1.addEventListener('click', () => {
     phoneView1.innerHTML = formatPhone(phoneExample);
@@ -30,6 +35,29 @@ btnSubmit.addEventListener('click', () => {
         alert('Mensagem eniada!');
     } else {
         alert('Preencha todos os campos');
+    }
+});
+
+inputNum1.addEventListener('keydown', (event) => {numCheck(event)});
+
+inputNum2.addEventListener('keydown', (event) => {numCheck(event)});
+
+inputNum3.addEventListener('keydown', (event) => {numCheck(event)});
+
+let checkCalcular = true;
+btnCalcular.addEventListener('click', () => {
+    let num1 = parseFloat(inputNum1.value);
+    let num2 = parseFloat(inputNum2.value);
+    let num3 = parseFloat(inputNum3.value);
+    if (checkCalcular) {
+        let calculationResult = regraDe3(num1, num2, num3);
+        resultView.value = calculationResult;
+        btnCalcular.innerHTML = 'Limpar';
+        checkCalcular = false;
+    } else {
+        clear();
+        btnCalcular.innerHTML = 'Calcular';
+        checkCalcular = true;
     }
 });
 
@@ -69,4 +97,16 @@ function formCheck() {
         if (textInput[i].value === '') return false;
     }
     return true;
+}
+
+function regraDe3(num1, num2, num3) {
+    let result = ((num2*num3)/num1);
+    return result;
+}
+
+function clear() {
+    inputNum1.value = '';
+    inputNum2.value = '';
+    inputNum3.value = '';
+    resultView.value = '';
 }

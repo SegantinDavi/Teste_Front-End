@@ -30,6 +30,10 @@ main {
     gap: 4em;
 }
 
+h1 {
+    font-size: 1.5em;
+}
+
 .container {
     padding: 2%;
     width: 35vh;
@@ -132,11 +136,16 @@ main {
 }
 
 .calculo-input {
+    padding: 3%;
     width: 100%;
     height: 2em;
     border-radius: 5px;
     border: 1.5px, solid, var(--color-3);
     align-self: center;
+}
+
+input#resultView {
+    border: 1.5px, solid, var(--color-1);
 }
 
 .calculo-btnCalcular {

@@ -41,7 +41,7 @@
         <!--bloco mande uma mensagem-->
         <section class="container">
             <form class="container-form">
-                <p class="form-titulo">Mande uma mensagem:</p>
+                <h1>Mande uma mensagem:</h1>
                 <input type="text" class="form-input" id="cpfInput" maxlength="14" placeholder="Digite seu CPF">
                 <input type="text" class="form-input" id="phoneInput" maxlength="14" placeholder="Digite seu telefone">
                 <input type="text" class="form-input assunto" placeholder="Digite o assunto">
@@ -51,16 +51,16 @@
 
         <!--bloco regra de 3-->
         <section class="container calculo">
-            <p class="calculo-titulo">Regra de 3</p>
+            <h1>Regra de 3</h1>
             <div class="container-calculo">
-                <input class="calculo-input" type="text">
+                <input class="calculo-input" type="text" id="inputNum1">
                 <img src="/icons/line_icon.png" alt="linha">
-                <input class="calculo-input" type="text">
-                <input class="calculo-input" type="text">
+                <input class="calculo-input" type="text" id="inputNum2">
+                <input class="calculo-input" type="text" id="inputNum3">
                 <img src="/icons/line_icon.png" alt="linha">
-                <input class="calculo-input" type="text">
+                <input class="calculo-input" type="text" id="resultView" disabled="true" placeholder="X">
             </div>
-            <button class="calculo-btnCalcular">Calcular</button>
+            <button class="calculo-btnCalcular" id="btnCalcular">Calcular</button>
         </section>
 
         <!--bloco modal da imagem-->
