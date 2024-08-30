@@ -14,8 +14,57 @@
         justify-self: center;
     }
 
+    .container-menu {
+        display: flex;
+        align-items: center;
+        gap: 2em;
+    }
+
     .imgCasa {
         padding: 0px;
+    }
+
+    .btnMenu {
+        display: none;
+    }
+
+    .menuDesktop {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .menuDesktop-opcoes {
+        list-style: none;
+        display: flex;
+        gap: 2em;
+        white-space: nowrap;
+    }
+
+    .menuDesktop-btnCadastrar {
+        padding: 2%;
+        white-space: nowrap;
+        background: none;
+        border: 3px solid white;
+        color: white;
+        border-radius: 20px;
+    }
+
+    .menu-paginas {
+        display: flex;
+        gap: 1em;
+    }
+
+    .menu-paginas > a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .container-footer {
+        display: flex;
+        align-items: center;
+        gap: 1em;
     }
 }
 
@@ -28,7 +77,19 @@
         grid-template-rows: repeat(3, 1fr);
     }
 
+    .menu {
+        width: 30%;
+    }
+
     .container {
         justify-self: center;
     } 
+
+    .menuDesktop {
+        display: none;
+    }
+
+    .menu-paginas {
+        display: none;
+    }
 }

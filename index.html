@@ -8,22 +8,53 @@
     <title>Teste Front-End</title>
 </head>
 <body>
+    <!--modal-->
     <div class="fade hidden"></div>
-    <header>
-        <a href="/">
-            <img src="/img/logo-imovel-guide.png" alt="logo da imovel guide">
-        </a>
-    </header>
-    <main>
-        <!--modal-->
-        <div id="modal" class="modal hidden">
-            <div class="modal-btnDiv">
-                <button class="btnFechar">
-                    <img src="/icons/close_icon.png" class="btnFechar-icon" alt="icone de fechar">
-                </button>
-            </div>
-            <img src="/img/fachada-casa.jpg" class="imgModal" alt="foto da fachada de uma casa">
+    <div id="modal" class="modal hidden">
+        <div class="modal-btnDiv">
+            <button class="btnFechar">
+                <img src="/icons/close_icon.png" class="btnFechar-icon" alt="icone de fechar">
+            </button>
         </div>
+        <img src="/img/fachada-casa.jpg" class="imgModal" alt="foto da fachada de uma casa">
+    </div>
+
+    <header>
+        <div class="container-menu">
+            <a href="/">
+                <img src="/img/logo-imovel-guide.png" alt="logo da imovel guide">
+            </a>
+            <nav class="menu-paginas">
+                <a href="">Condomínios</a>
+                <a href="">Fórum</a>
+                <a href="">Guia</a>
+                <a href="">Artigos</a>
+                <a href="">Ferramentas</a>
+            </nav>
+        </div>
+        <button class="btnMenu">
+            <img src="/icons/menu_icon.png" class="btnMenu-icon" alt="icone de menu">
+        </button>
+        <menu class="menu hidden">
+            <ul class="menu-opcoes">
+                <li><a href="/" class="opcoes-opcao">Cotar Imóvel</a></li>
+                <li><a href="/" class="opcoes-opcao">Planos</a></li>
+                <li><a href="/" class="opcoes-opcao">Entrar</a></li>
+            </ul>
+            <button class="btnCadastrar">Cadastre-se</button>
+        </menu>
+        <!--menu desk top-->
+        <menu class="menuDesktop">
+            <ul class="menuDesktop-opcoes">
+                <li><a href="/" class="opcoes-opcao">Cotar Imóvel</a></li>
+                <li><a href="/" class="opcoes-opcao">Planos</a></li>
+                <li><a href="/" class="opcoes-opcao">Entrar</a></li>
+            </ul>
+            <button class="menuDesktop-btnCadastrar">Cadastre-se</button>
+        </menu>
+    </header>
+
+    <main>
         <!--bloco corretores-->
         <section class="container">
             <div class="container-corretor">
@@ -99,9 +130,17 @@
             </div>
         </section>
     </main>
+
     <footer>
-        <p class="footer-texto">Desenvolvido por Davi Gabriel Segantin</p>
-        <img src="/img/logo-imovel-guide.png" alt="logo da imovel guide">
+        <nav class="menu-paginas">
+            <a href="">Termos</a>
+            <a href="">Contatos</a>
+            <a href="">Sobre</a>
+        </nav>
+        <div class="container-footer">
+            <p class="footer-texto">Desenvolvido por Davi Gabriel Segantin</p>
+            <img src="/img/logo-imovel-guide.png" alt="logo da imovel guide">
+        </div>
     </footer>
 
     <script src="/script/script.js"></script>

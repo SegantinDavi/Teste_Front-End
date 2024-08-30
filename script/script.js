@@ -13,6 +13,12 @@ const fade = document.querySelector('.fade');
 const modal = document.querySelector('.modal');
 const btnOpenModal = document.querySelector('#btnOpenModal');
 const btnCloseModal = document.querySelector('.btnFechar');
+const btnMenu = document.querySelector('.btnMenu');
+const menu = document.querySelector('.menu');
+
+btnMenu.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+});
 
 btnOpenModal.addEventListener('click', () => {
     if (modal.classList.contains('hidden')) {
