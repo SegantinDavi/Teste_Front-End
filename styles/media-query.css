@@ -13,6 +13,10 @@
         height: 45vh;
         justify-self: center;
     }
+
+    .imgCasa {
+        padding: 0px;
+    }
 }
 
 /*tela tablet*/
@@ -27,12 +31,4 @@
     .container {
         justify-self: center;
     } 
-
-    .imgCasa{
-        padding: 5%;
-    }
-
-    .imgCasa-texto {
-        padding: 2%;
-    }
 }

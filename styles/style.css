@@ -17,6 +17,58 @@
     font-weight: 500;
 }
 
+.fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.modal {
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px, solid, black;
+    z-index: 10;
+}
+
+.modal-btnDiv {
+    background-color: white;
+    width: 100%;
+    border: 1.5px, solid, black;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btnFechar {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btnFechar-icon {
+    width: 80%;
+}
+
+.imgModal {
+    width: 90%;
+    border-radius: 8px;
+    margin: 5%;
+}
+
 header {
     padding: 2%;
     background-color: var(--color-2);
@@ -34,8 +86,12 @@ h1 {
     font-size: 1.5em;
 }
 
+button {
+    cursor: pointer;
+}
+
 .container {
-    padding: 2%;
+    padding: 1%;
     width: 35vh;
     height: 35vh;
     border: 1.5px, solid, var(--color-3);
@@ -55,6 +111,7 @@ h1 {
 }
 
 .container-imgCorretor {
+    position: relative;
     width: 100%;
     height: 100%;
     border: 1.5px solid var(--color-3);
@@ -67,12 +124,22 @@ h1 {
     background-image: url(/img/foto-corretora.png);
     background-position: center;
     background-size: cover;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+    position: absolute;
+    z-index: -1;
 }
 
 .corretor {
     background-image: url(/img/foto-corretor.png);
     background-position: center;
     background-size: cover;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+    position: absolute;
+    z-index: -1;
 }
 
 .container-dadosCorretor {
@@ -93,6 +160,7 @@ h1 {
     text-decoration: underline;
     font-size: 0.8em;
     color: var(--color-1);
+    cursor: pointer;
 }
 
 .container-form {
@@ -159,20 +227,46 @@ input#resultView {
 }
 
 .imgCasa {
-    background-image: url(/img/fachada-casa.jpg);
-    background-position: center;
-    background-size: cover;
-    justify-content: flex-end;
-    padding: 8%;
+    position: relative;
+    padding: 0;
 }
 
-.imgCasa-texto {
-    padding: 4%;
+.imgCasa-img {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.casa {
+    height: 100%;
+}
+
+.imgCasa-btn {
+    position: absolute;
+    bottom: -40px;
+    padding: 2%;
+    font-size: 0.9em;
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+    background-color: var(--color-1);
+    align-self: center;
+    width: 100%;
+}
+
+.downloadBtn {
+    width: 50%;
+}
+
+.imgCasa-legenda {
+    position: absolute;
+    bottom: 30px;
+    padding: 3%;
     color: white;
     background-color: hsla(21, 99%, 54%, 0.893);
     text-align: center;
     border-radius: 5px;
-    width: 90%;
+    width: 85%;
     align-self: center;
 }
 
@@ -187,4 +281,13 @@ footer {
 .footer-texto {
     color: white;
     font-size: 0.9em;
+}
+
+@keyframes zoomOut {
+    from {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
 }

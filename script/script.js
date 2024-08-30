@@ -9,6 +9,24 @@ const inputNum1 = document.querySelector('#inputNum1');
 const inputNum2 = document.querySelector('#inputNum2');
 const inputNum3 = document.querySelector('#inputNum3');
 const resultView = document.querySelector('#resultView');
+const fade = document.querySelector('.fade');
+const modal = document.querySelector('.modal');
+const btnOpenModal = document.querySelector('#btnOpenModal');
+const btnCloseModal = document.querySelector('.btnFechar');
+
+btnOpenModal.addEventListener('click', () => {
+    if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+        fade.classList.remove('hidden');
+    }
+});
+
+btnCloseModal.addEventListener('click', () => {
+    if (!modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        fade.classList.add('hidden');
+    }
+});
 
 phoneView1.addEventListener('click', () => {
     phoneView1.innerHTML = formatPhone(phoneExample);
@@ -32,7 +50,7 @@ cpfInput.addEventListener('keydown', (event) => {
 
 btnSubmit.addEventListener('click', () => {
     if (formCheck()) {
-        alert('Mensagem eniada!');
+        alert('Mensagem enviada!');
     } else {
         alert('Preencha todos os campos');
     }

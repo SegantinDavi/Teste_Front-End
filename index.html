@@ -8,16 +8,27 @@
     <title>Teste Front-End</title>
 </head>
 <body>
+    <div class="fade hidden"></div>
     <header>
         <a href="/">
             <img src="/img/logo-imovel-guide.png" alt="logo da imovel guide">
         </a>
     </header>
     <main>
+        <!--modal-->
+        <div id="modal" class="modal hidden">
+            <div class="modal-btnDiv">
+                <button class="btnFechar">
+                    <img src="/icons/close_icon.png" class="btnFechar-icon" alt="icone de fechar">
+                </button>
+            </div>
+            <img src="/img/fachada-casa.jpg" class="imgModal" alt="foto da fachada de uma casa">
+        </div>
         <!--bloco corretores-->
         <section class="container">
             <div class="container-corretor">
-                <div class="container-imgCorretor corretora">
+                <div class="container-imgCorretor">
+                    <div class="corretora"></div>
                     <img src="/img/foto-corretora.png" alt="foto do corretor">
                 </div>
                 <div class="container-dadosCorretor">
@@ -27,7 +38,8 @@
                 </div>
             </div>
             <div class="container-corretor">
-                <div class="container-imgCorretor corretor">
+                <div class="container-imgCorretor">
+                    <div class="corretor"></div>
                     <img src="/img/foto-corretor.png" alt="foto do corretor">
                 </div>
                 <div class="container-dadosCorretor">
@@ -64,20 +76,48 @@
         </section>
 
         <!--bloco modal da imagem-->
-        <section class="container imgCasa"></section>
+        <section class="container imgCasa">
+            <div class="imgCasa-img">
+                <img src="/img/fachada-casa.jpg" class="casa" alt="foto da fachada de uma casa">
+            </div>
+            <button class="imgCasa-btn" id="btnOpenModal">ABRIR IMAGEM NO MODAL</button>
+        </section>
 
         <!--bloco download da imagem-->
         <section class="container imgCasa">
-            <p class="imgCasa-texto">Imovel Guide</p>
+            <div class="imgCasa-img" id="imgCasa">
+                <img src="/img/fachada-casa.jpg" class="casa" alt="foto da fachada de uma casa">
+                <p class="imgCasa-legenda">Imovel Guide</p>
+            </div>
+            <button class="imgCasa-btn downloadBtn" id="btnDownload">Download</button>
         </section>
 
         <!--bloco animacao de zoom out da imagem-->
-        <section class="container imgCasa"></section>
+        <section class="container imgCasa">
+            <div class="imgCasa-img">
+                <img src="/img/fachada-casa.jpg" class="casa" alt="foto da fachada de uma casa">
+            </div>
+        </section>
     </main>
     <footer>
         <p class="footer-texto">Desenvolvido por Davi Gabriel Segantin</p>
         <img src="/img/logo-imovel-guide.png" alt="logo da imovel guide">
     </footer>
+    
     <script src="/script/script.js"></script>
+    <script src="/script/html2canvas.min.js"></script>
+    <script>
+        const btnDownload = document.querySelector('#btnDownload');
+
+        btnDownload.addEventListener('click', () => {
+            console.log('clicou');
+            html2canvas(document.querySelector("#imgCasa")).then(canvas => {
+                let link = document.createElement('a');
+                link.download = 'casa.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            });
+        });
+    </script>
 </body>
 </html>
