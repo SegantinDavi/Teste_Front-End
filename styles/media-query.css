@@ -27,6 +27,10 @@
     .btnMenu {
         display: none;
     }
+    
+    .menu {
+        display: none;
+    }
 
     .menuDesktop {
         display: flex;
